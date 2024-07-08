@@ -1,33 +1,40 @@
 body {
     font-family: Arial, sans-serif;
-    color: red;
+    color: black;
     padding: 20px;
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 110vh;
-    background-color: black;
-}
-
-h1 {
+    min-height: 100vh;
+    background-color: white;
+  }
+  
+  .container {
     text-align: center;
-}
-
-button {
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  button {
     padding: 15px 20px;
     margin-top: 20px;
-    background-color: white;
-    color: #f50606;
+    background-color: blue;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
-}
-
-button:hover {
+  }
+  
+  button:hover {
     background-color: #218838;
-}
-
-p {
+  }
+  
+  p {
     margin-top: 20px;
     font-size: 1.2em;
     text-align: center;
-}
+    color: black;
+  }
