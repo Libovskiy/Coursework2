@@ -1,0 +1,113 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    background-color: #1a1a1d;
+    color: #f4f4f9;
+    padding: 1em 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 1em 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: #f4f4f9;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #ff6347;
+}
+
+section {
+    padding: 3em 1em;
+    text-align: center;
+}
+
+#home h2 {
+    font-size: 3em;
+    margin: 0.5em 0;
+}
+
+#home p {
+    font-size: 1.5em;
+}
+
+#music, #contact {
+    background-color: #f4f4f9;
+    border-top: 1px solid #ddd;
+}
+
+.music-player {
+    margin: 1em 0;
+    text-align: center;
+}
+
+.music-player button {
+    background-color: #1a1a1d;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    margin: 0 0.5em;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.music-player button:hover {
+    background-color: #ff6347;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label {
+    margin: 0.5em 0;
+}
+
+form input, form textarea {
+    padding: 0.5em;
+    margin: 0.5em 0;
+    width: 80%;
+    max-width: 500px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+form button {
+    background-color: #1a1a1d;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+form button:hover {
+    background-color: #ff6347;
+}
