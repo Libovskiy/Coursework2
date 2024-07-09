@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <projectInfo>
+        <projectName>CousrseWork2</projectName>
+        <projectDescription>Complete 6 tasks, from EcoSystem cousrsework semester 2</projectDescription>
+        <startDate>2024-07-01</startDate>
+        <endDate>2024-07-11</endDate>
+    </projectInfo>
+    
+    <teamMembers>
+        <member>
+            <name>Alibe Zhumabayev</name>
+            <role>XML and JS codes</role>
+            <email>Alibek.zh09@gmail.com</email>
+        </member>
+        <member>
+            <name>Efe Kan</name>
+            <role>HTML, CSS and OverLeaf codes</role>
+            <email>efekan00@gmail.com</email>
+        </member>
+    </teamMembers>
+
+    <tasks>
+        <task>
+            <taskID>1</taskID>
+            <taskName>Git Usage</taskName>
+            <assignedTo>Alibek Zhumabayev and Efe Kan</assignedTo>
+            <status>Completed</status>
+            <dueDate>2024-07-05</dueDate>
+        </task>
+
+        <task>
+            <taskID>2</taskID>
+            <taskName>Create a website</taskName>
+            <assignedTo>Efe Kan and Alibek Zhumabayev</assignedTo>
+            <status>Completed</status>
+            <dueDate>2024-07-06</dueDate>
+        </task>
+
+        <task>
+            <taskID>3</taskID>
+            <taskName>Java Script</taskName>
+            <assignedTo>Alibek Zhumabayev and Efe Kan</assignedTo>
+            <status>Completed</status>
+            <dueDate>2024-07-08</dueDate>
+        </task>
+
+        <task>
+            <taskID>4</taskID>
+            <taskName>LaTeX</taskName>
+            <assignedTo>Efe Kan</assignedTo>
+            <status>Completed</status>
+            <dueDate>2024-07-08</dueDate>
+        </task>
+
+        <task>
+            <taskID>5</taskID>
+            <taskName>Create XML Design</taskName>
+            <assignedTo>Alibek Zhumabayev</assignedTo>
+            <status>Completed</status>
+            <dueDate>2024-07-09</dueDate>
+        </task>
+        
+        <task>
+            <taskID>6</taskID>
+            <taskName>Documentation</taskName>
+            <assignedTo>Efe Kan and Alibek Zhumabayev</assignedTo>
+            <status>Not Started</status>
+            <dueDate>2024-07-10</dueDate>
+        </task>
+
+    </tasks>
+    
+    <milestones>
+        <milestone>
+            <milestoneID>1</milestoneID>
+            <milestoneName>Initial Draft Complete</milestoneName>
+            <date>2024-07-05</date>
+        </milestone>
+        <milestone>
+            <milestoneID>2</milestoneID>
+            <milestoneName>Schema Validation</milestoneName>
+            <date>2024-07-10</date>
+        </milestone>
+        <milestone>
+            <milestoneID>3</milestoneID>
+            <milestoneName>Final Review</milestoneName>
+            <date>2024-07-25</date>
+        </milestone>
+    </milestones>
+</project>

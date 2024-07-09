@@ -3,15 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Book Webpage</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Project Details</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to the Book Store!</h1>
-        <button id="myButton">Show Random Book</button>
-        <p id="bookInfo"></p>
-    </div>
-    <script src="scripts.js"></script>
+    <h1>Project Details</h1>
+    <div id="project-info" class="section"></div>
+    <h2>Team Members</h2>
+    <div id="team-members" class="section"></div>
+    <h2>Tasks</h2>
+    <div id="tasks" class="section"></div>
+    <h2>Milestones</h2>
+    <div id="milestones" class="section"></div>
+
+    <script>
+        // Function to load XML
+        function loadXMLDoc(filename) {
+            return fetch(filename)
+                .then(response => response.text())
+                .then(str => (new window.DOMParser()).parseFromString(str, "text/xml"));
+        }
+
+        // Function to display project details
+        function displayProjectDetails(xml) {
+            const projectInfo = xml.getElementsByTagName("projectInfo")[0];
+            document.getElementById("project-info").innerHTML = `
+                <h3>${projectInfo.getElementsByTagName("projectName")[0].textContent}</h3>
+                <p>${projectInfo.getElementsByTagName("projectDescription")[0].textContent}</p>
+                <p><strong>Start Date:</strong> ${projectInfo.getElementsByTagName("startDate")[0].textContent}</p>
+                <p><strong>End Date:</strong> ${projectInfo.getElementsByTagName("endDate")[0].textContent}</p>
+            `;
+        }
+
+        // Function to display team members
+        function displayTeamMembers(xml) {
+            const members = xml.getElementsByTagName("member");
+            let html = '<table><tr><th>Name</th><th>Role</th><th>Email</th></tr>';
+            for (let member of members) {
+                html += `<tr>
+                    <td>${member.getElementsByTagName("name")[0].textContent}</td>
+                    <td>${member.getElementsByTagName("role")[0].textContent}</td>
+                    <td>${member.getElementsByTagName("email")[0].textContent}</td>
+                </tr>`;
+            }
+            html += '</table>';
+            document.getElementById("team-members").innerHTML = html;
+        }
+
+        // Function to display tasks
+        function displayTasks(xml) {
+            const tasks = xml.getElementsByTagName("task");
+            let html = '<table><tr><th>ID</th><th>Name</th><th>Assigned To</th><th>Status</th><th>Due Date</th></tr>';
+            for (let task of tasks) {
+                html += `<tr>
+                    <td>${task.getElementsByTagName("taskID")[0].textContent}</td>
+                    <td>${task.getElementsByTagName("taskName")[0].textContent}</td>
+                    <td>${task.getElementsByTagName("assignedTo")[0].textContent}</td>
+                    <td>${task.getElementsByTagName("status")[0].textContent}</td>
+                    <td>${task.getElementsByTagName("dueDate")[0].textContent}</td>
+                </tr>`;
+            }
+            html += '</table>';
+            document.getElementById("tasks").innerHTML = html;
+        }
+
+        // Function to display milestones
+        function displayMilestones(xml) {
+            const milestones = xml.getElementsByTagName("milestone");
+            let html = '<table><tr><th>ID</th><th>Name</th><th>Date</th></tr>';
+            for (let milestone of milestones) {
+                html += `<tr>
+                    <td>${milestone.getElementsByTagName("milestoneID")[0].textContent}</td>
+                    <td>${milestone.getElementsByTagName("milestoneName")[0].textContent}</td>
+                    <td>${milestone.getElementsByTagName("date")[0].textContent}</td>
+                </tr>`;
+            }
+            html += '</table>';
+            document.getElementById("milestones").innerHTML = html;
+        }
+
+        // Load and display the XML data
+        loadXMLDoc('script.xml').then(xml => {
+            displayProjectDetails(xml);
+            displayTeamMembers(xml);
+            displayTasks(xml);
+            displayMilestones(xml);
+        });
+    </script>
 </body>
 </html>
